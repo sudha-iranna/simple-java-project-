@@ -13,7 +13,9 @@ pipeline{
                            }
             stage ('DEPLOY')
             {
-                  sh 'echo "SUCCESS"'
+              steps {
+                     sh 'echo "SUCCESS"'
             }
         }
+}
 }
