@@ -17,7 +17,7 @@ pipeline{
                   label 'label-J'
                   }
                   steps {
-                        sudo cp -r /home/ec2-user/workspace/pipeline2/target/works-with-heroku-1.0.war /opt/apache-tomcat-9.0.65/webapps
+                       sh 'sudo cp -r /home/ec2-user/workspace/pipeline2/target/works-with-heroku-1.0.war /opt/apache-tomcat-9.0.65/webapps'
                         }
                     }
 }
