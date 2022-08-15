@@ -13,8 +13,11 @@ pipeline{
                            }
             stage ('DEPLOY')
             {
+                  agent {
+                  label 'label-J'
+                  }
               steps {
-                     sh 'echo "SUCCESS"'
+                    echo "deployed"
             }
         }
 }
