@@ -7,7 +7,7 @@ pipeline{
                       label 'label-C'
                           }
                steps {
-                git branch: 'main', url: 'https://github.com/SushrutaEswar/simple-java-project.git'
+                git branch: 'master', url: 'https://github.com/SushrutaEswar/simple-java-project.git'
                sh 'mvn clean install'
                            }
                            }
