@@ -4,7 +4,7 @@ pipeline{
           stage ('BUILD')
                  {
                  agent {
-                      label 'label-C'
+                      label 'label-J'
                           }
                steps {
                 git branch: 'master', url: 'https://github.com/SushrutaEswar/simple-java-project.git'
