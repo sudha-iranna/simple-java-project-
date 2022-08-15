@@ -1,5 +1,6 @@
 pipeline{
       agent none 
+      stages{
           stage ('BUILD')
                  {
                  agent {
@@ -10,5 +11,9 @@ pipeline{
                sh 'mvn clean install'
                            }
                            }
+            stage ('DEPLOY')
+            {
+                  sh 'echo "SUCCESS"'
+            }
         }
-             
+}
