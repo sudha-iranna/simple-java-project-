@@ -12,6 +12,7 @@ stages {
     {
     git branch: 'main', url: 'https://github.com/sudha-iranna/simple-java-project-sushruta.git'
      sh 'echo "this is build stage"'
+      sh 'mvn clean install'
                }
          else {
          echo "skipping build stage"
