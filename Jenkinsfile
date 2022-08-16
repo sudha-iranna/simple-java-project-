@@ -5,7 +5,7 @@ parameters {
 }
 stages {
   stage('BUILD') {
-    agent {label'slave1'}
+    agent any
     steps {
     script {
     if (params.STAGE=='build')
