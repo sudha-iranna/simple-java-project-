@@ -10,9 +10,9 @@ stages {
     script {
     if (params.STAGE=='build')
     {
-    git branch: 'main', url: 'https://github.com/sudha-iranna/simple-java-project-sushruta.git'
-     sh 'echo "this is build stage"'
-      sh 'mvn clean install'
+    git branch: 'main', url: 'https://github.com/sudha-iranna/simple-java-project-.git'
+          sh 'mvn clean install'
+       sh 'echo "this is build stage"'
                }
          else {
          echo "skipping build stage"
