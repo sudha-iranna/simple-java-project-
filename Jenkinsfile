@@ -10,7 +10,7 @@ stages {
     script {
     if (params.STAGE=='build')
     {
-    git branch: 'main', url: 'https://github.com/sudha-iranna/j-project.git'
+    git branch: 'main', url: 'https://github.com/sudha-iranna/simple-java-project-sushruta.git'
      sh 'echo "this is build stage"'
                }
          else {
