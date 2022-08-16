@@ -1,0 +1,40 @@
+pipeline {
+agent any
+parameters {
+  choice choices: ['BUILD', 'DEPLOY', 'TEST'], description: 'enter stage to run', name: 'STAGE'
+}
+
+stages {
+  stage('BUILD') {
+      when {
+      expression { params.STAGE == 'BUILD' }
+    }
+    steps {
+      echo "this is build stage"
+	  // One or more steps need to be included within the steps block.
+    }
+  }
+
+  stage('DEPLOY') {
+      when {
+      expression { params.STAGE == 'DEPLOY' }
+    }
+    steps {
+     echo "this is deploy stage" 
+	 // One or more steps need to be included within the steps block.
+    }
+  }
+
+  stage('TEST') {
+      when {
+      expression { params.STAGE == 'TEST' }
+    }
+    steps {
+     echo "this is test stage" 
+	 // One or more steps need to be included within the steps block.
+    }
+  }
+
+}
+
+}
