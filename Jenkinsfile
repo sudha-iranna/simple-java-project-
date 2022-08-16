@@ -28,7 +28,8 @@ stages {
      script {
     if (params.STAGE=='deploy')
     {
-      echo "this is deploy stage"
+      sh 'sudo cp -r /home/ec2-user/workspace/b4-assign-check/target/works-with-heroku-1.0.war /home/ec2-user/apache-tomcat-9.0.65/webapps'
+           echo "this is deploy stage"
       sh 'sleep 5'
     }
     else {
