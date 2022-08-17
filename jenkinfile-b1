@@ -1,0 +1,39 @@
+pipeline{
+agent any
+environment {
+  BRANCH = "$GIT_BRANCH"
+  GIT_REPO = "https://github.com/sudha-iranna/simple-java-project-.git"
+}
+stages {
+  stage('TESTING1') {
+    steps {
+	script{
+	if (env.BRANCH == 'master')
+	{sh 'echo "this is testing1 stage"'
+	sleep5
+	}
+	else
+	{
+	error ("build failed")
+	}
+	}
+        }
+  }
+
+  stage('TESTING2') {
+    steps {
+	script{
+	if (env.BRANCH == 'master')
+	{sh 'echo "this is testing2 stage"'
+	sleep
+	}
+	else {
+	error ("build failed")
+	}}
+      
+    }
+  }
+
+}
+
+}
